@@ -16,14 +16,14 @@ def about():
 @app.route('/articles')
 def articles():
     articles = Articles()
-    print(articles[0]['author'])
+    # print(articles[0]['author'])
     return render_template("articles.html", articles = articles)
 
 @app.route('/article/<int:id>')
 def article(id):
     articles = Articles()
     article = articles[id-1]
-    # print("똥꾸멍")
+    print("articles[id-1]")
     return render_template("article.html", article = article)
 
 
